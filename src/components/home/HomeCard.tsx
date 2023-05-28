@@ -1,14 +1,15 @@
 import { Card } from "react-bootstrap";
-import logo from "../logo.svg"
-export const HomeCard = () => {
+import './homeCard.css';
+import logo from '../../logo.svg';
+
+export const HomeCard = ({title, img, link, bgColor, textColor, text}: IHomeCard) => {
     return (
-        <Card style={{ width: '18rem', borderStyle: 'dotted' }}>
-            <Card.Img variant="top" src="../logo.svg" />
+        <Card id={title + "navCard"} className="navCard" style={{backgroundColor: bgColor }}>
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                <Card.Title style={{color: textColor}}>{title}</Card.Title>
+                <Card.Img style={{height: '10vmin'}}variant="top" src={logo} />
+                <Card.Text style={{color: textColor}}>
+                    {text}
                 </Card.Text>
             </Card.Body>
         </Card>
@@ -19,4 +20,7 @@ export interface IHomeCard {
     title: string;
     img: any;
     link: any;
+    bgColor: string;
+    textColor: string;
+    text: string;
 }

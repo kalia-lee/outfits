@@ -11,10 +11,14 @@
 .titleIntro {
     display: flex;
     flex-direction: column;
+    font-family: 'Tapestry';
+    margin-left: 20px;
+    width: 35%;
 }
 
 .navCards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
 }

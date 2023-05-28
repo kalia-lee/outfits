@@ -1,5 +1,5 @@
 .App {
-  background-color: #f1dfb6;
+  background-color: #FDF3DD;
   min-height: 100vh;
   justify-content: flex-start;
   align-items: center;
@@ -7,7 +7,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
