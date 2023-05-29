@@ -1,13 +1,17 @@
 import { Card } from "react-bootstrap";
 import './homeCard.css';
-import logo from '../../logo.svg';
+import IconStar from "../../icons/IconStar"
+import logo from "../../icons/logo.svg"
 
-export const HomeCard = ({title, img, link, bgColor, textColor, text}: IHomeCard) => {
+export const HomeCard = ({title, icon, link, bgColor, textColor, text}: IHomeCard) => {
     return (
         <Card id={title + "navCard"} className="navCard" style={{backgroundColor: bgColor }}>
             <Card.Body>
                 <Card.Title style={{color: textColor}}>{title}</Card.Title>
-                <Card.Img style={{height: '10vmin'}}variant="top" src={logo} />
+                <br></br>
+                <i style={{ color: textColor}}>
+                    <IconStar></IconStar>
+                </i>
                 <Card.Text style={{color: textColor}}>
                     {text}
                 </Card.Text>
@@ -18,7 +22,7 @@ export const HomeCard = ({title, img, link, bgColor, textColor, text}: IHomeCard
 
 export interface IHomeCard {
     title: string;
-    img: any;
+    icon: any;
     link: any;
     bgColor: string;
     textColor: string;
