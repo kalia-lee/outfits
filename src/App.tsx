@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import { Home } from './components/home/Home';
+import { Randomizer } from './components/randomizer/Randomizer';
+import { About } from './components/about/About';
+import { Closet } from './components/closet/Closet';
 import { HashRouter, Route, Routes, Link } from "react-router-dom";
 
 const App = () => {
@@ -8,18 +11,14 @@ const App = () => {
     <HashRouter basename='/'>
       <div className="App">
         <Routes>
-          <Route path="/" Component={HomePage} />
-          <Route path="/about" Component={About} />
-          <Route path="/randomizer" Component={Randomizer} />
-          <Route path="/closet" Component={Closet} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/randomizer" element={<Randomizer />} />
+          <Route path="/closet" element={<Closet />} />
         </Routes>
       </div>     
     </HashRouter>
   );
 }
 
-const Closet = () => <div>Closet!</div>;
-const HomePage = () => <Home></Home>;
-const Randomizer = () => <div>Randomizer</div>;
-const About = () => <div>About Me</div>
 export default App;

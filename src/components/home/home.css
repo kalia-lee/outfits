@@ -11,9 +11,11 @@
 .titleIntro {
     display: flex;
     flex-direction: column;
-    font-family: 'Tapestry';
+    font-family: 'Yeseva One', cursive;
     margin-left: 20px;
     width: 35%;
+    border-radius: 25px;
+    background-color: '#d6e8f7';
 }
 
 .navCards {
